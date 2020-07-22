@@ -1,0 +1,27 @@
+<%- include("header") %> 
+    <section id="blog-section" class="container-fluid">
+        <div id="mySidebar" class="sidebar">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <!-- <a href="/blog#20-july-2020">Building this website. <i class="fas fa-thumbtack"></i></a> -->
+            <a href="/blog#18-july-2020">Connect React App with Node.Js</a>
+        </div>
+    
+        <div class="blog-name">
+                <i title="Click to Navigate" id="sidebar-button" onclick="openNav()" class="openbtn fas fa-bars" ></i>
+                Blog 
+        </div>
+    
+        <%posts.forEach( (post, index)=>{%>
+        <div title="<%=post.title%>" id="<%=urlDate(post.date)%>" class="blog-box">    
+            <div class="blog">
+                <h2 title="<%=post.date%>" class="blog-date">
+                    <%=post.date%>
+                </h2>
+                <h2 class="blog-heading"><%=post.title%></h2>
+                <pre class="blog-content"><%-decodeURI(post.content).substring(0,600)%> <a href=<%="/blog/"+urlDate(post.date)%> >...more</a></pre>
+            </div>
+        </div>
+       <% }) %>
+       
+    </section>
+<%- include("footer") %> 

@@ -1,0 +1,14 @@
+<%-include("header")%>
+        <div style="margin : 50px auto" class="blog-box">    
+                <div class="blog">
+                    
+                    <h1 class="blog-date">
+                        <%=post.date%>
+                    </h1>
+                    <h2 class="blog-heading"><%=post.title%></h2>
+                    <p class="blog-content"><%-decodeURI(post.content)%></p>
+                    <a href="/blog"><i class="fas fa-arrow-left fa-2x"></i></i></a>
+                </div>
+        
+        </div>
+<%-include("footer")%>

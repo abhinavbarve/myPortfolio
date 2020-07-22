@@ -1,0 +1,661 @@
+html{
+    scroll-behavior : smooth;
+    /* position:absolute; */
+}
+body {
+    margin: auto;
+    padding:0px;
+    /* width: 1536px; */
+    font-weight: 550;
+    font-family: 'Karla', sans-serif;
+    overflow-x: hidden
+}
+
+.loader-wrapper{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top:0;
+    left:0;
+    place-items: center;
+    text-align: center;
+    background-color: white;
+    z-index:10;
+}
+.loader {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    top: 45vh;
+    position: relative;
+    border: 4px solid #1b6ca8;
+    animation: loader 2s infinite ease;
+}
+
+.loader-inner {
+    vertical-align: top;
+    display: inline-block;
+    width: 100%;
+    background-color: #1b6ca8;
+    animation: loader-inner 1s infinite ease-in;
+}
+
+@keyframes loader {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(180deg);
+    }
+
+    50% {
+        transform: rotate(180deg);
+    }
+
+    75% {
+        transform: rotate(360deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes loader-inner {
+    0% {
+        height: 0%;
+    }
+
+    25% {
+        height: 25%;
+    }
+
+    50% {
+        height: 50%;
+    }
+
+    75% {
+        height: 75%;
+    }
+
+    100% {
+        height: 100%;
+    }
+}
+
+/* navbar----------------------------------------------- */
+
+#navigation-bar {
+    padding: 10px 0px;
+    margin: auto;
+    position: sticky;
+    top: 0px;
+    z-index: 1;
+    opacity: 95%;
+}
+
+.nav {
+    width: 60%;
+    margin: auto;
+}
+
+.links {
+    text-align: right;
+    margin: 25px 0px
+}
+
+.link {
+    padding: 5px;
+    display: inline;
+    margin-left: 5px;
+    color: #3b6978;
+    font-size: 18px;
+    font-weight: 400;
+    font-weight: 400
+}
+
+.link:hover {
+    text-decoration: none;
+    color: #142850;
+}
+
+.image-brand {
+    text-align: left
+}
+
+.nav-right {
+    padding-right: 0px
+}
+
+/* headroom.js */
+.headroom {
+    will-change: transform;
+    transition: transform 500ms ease-in-out;
+    background:#bbe9e6;
+}
+
+.headroom .headroom--not-bottom .headroom--pinned .headroom--top{
+    background:#bbe9e6;
+    transform : translateY(0%);
+}
+
+.headroom.headroom--not-bottom.headroom--not-top.headroom--unpinned{
+    transform : translateY(-100%);
+    box-shadow: 0 0px 10px black;
+}
+
+.headroom.headroom--not-bottom.headroom--not-top.headroom--pinned{
+    transform : translateY(0%);
+    background : #fff;
+    box-shadow: 0 0px 10px black;
+}
+
+/* -------------------------------------------------------------------- */
+
+@font-face {
+    font-family: 'league_spartanbold';
+    src: url('/css/LSFont/leaguespartan-bold.woff2') format('woff2'),
+         url('/css/LSFont/leaguespartan-bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+#introduction {
+    padding:0px;
+    text-align: center;
+    background-color: #bbe9e6;
+}
+
+#introduction .row{
+    margin:0px;
+    padding:0px;
+    min-height: 660px;
+    border-top : 1px solid rgb(219, 219, 219);
+    position:relative;
+    box-shadow: 0px -100px 10px #bbe9e6;
+}
+
+#introduction .left{
+    background-color: #fff;
+}
+
+#introduction .name{
+    height: 500px; width : 700px;
+    padding: 150px 0px;
+    position:absolute;
+    top :80px;
+    left:100px;
+    background:#bbe9e6;
+    box-shadow: 0 0 3px black ;
+}
+
+.name h1,.name h2, .name p{
+    width:60%;
+    color: #1b6ca8;
+    margin:auto;
+    text-align:left;
+    font-family: 'league_spartanbold';
+    font-size: 4rem;
+}
+
+.name h1{
+    font-size: 5rem;
+}
+
+.name p{
+    font-size: 1.5rem;
+    font-weight:700;
+    font-family: 'Karla', sans-serif;
+}
+
+.salutation {
+    width: 60%;
+    margin: auto;
+}
+
+.salutation-box {
+    width: 80%;
+    margin: 140px auto;
+}
+
+.hi {
+    font-size: 24px;
+    color: #1b6ca8;
+    font-family: 'Karla', sans-serif;
+    padding: 24px 0 0 0;
+    font-weight: 700;
+    margin: 0px
+}
+
+.hi-line {
+    font-size: 20px;
+    color: rgb(50,50, 50);
+    font-family: 'EB Garamond', serif;
+}
+
+.border-image {
+    margin: 25px 0px
+}
+
+@media screen and (max-width:1334px) {
+    #introduction .name{ 
+    margin : auto;
+    height: 500px; width : 80%;
+    position:static;
+    padding: 150px 0px;
+    background:#bbe9e6;
+    box-shadow: 0 0 5px black;
+    }
+
+    #introduction .left{
+        padding : 80px 0px;
+    }
+
+}
+
+/* -------------------------------------------------------------------------- */
+
+#information{
+    text-align: center;
+    padding:100px 0px;
+}
+
+.affirmation,.affirmation p{
+    width: 60%;
+    margin: auto;
+    font-size: 20px;
+    color: rgb(50, 50, 50);
+    font-family: 'EB Garamond', serif;
+}
+
+/* ------------------------------------------------------------------------------------ */
+
+/* projects page */
+#projects-intro{
+    text-align: center;
+    background-color: #bbe9e6 ;
+    padding : 100px 0;
+    box-shadow: 0 -100px #bbe9e6;
+}
+
+.intro{
+    margin:auto
+}
+
+#projects-intro h1,#projects-intro h2,#projects-intro p{
+    width:60%;
+    margin:auto;
+    color: #1b6ca8;
+    font-family: 'league_spartanbold';
+    font-size: 4rem;
+}
+
+#projects-intro h2{
+    font-size: 4rem;
+}
+
+#projects-intro p{
+    font-size: 1.5rem;
+    font-weight:700;
+    font-family: 'Karla', sans-serif;
+
+}
+
+
+.projects-line {
+    margin: auto;
+    padding: 42px 0px;
+    background-color: #fff;
+    text-align: center;
+    width: 60%;
+}
+
+.projects-line p{
+    width:50%;
+    text-align:justify;
+    margin:auto;
+    font-size: 18px;
+}
+
+.my-project{
+    padding:80px 0px ;
+    box-shadow: 0 0 10px rgb(133, 133, 133) ;
+}
+
+.project-row{
+    width: 60%;
+    margin:auto;
+}
+
+.image-col,.desc-col{
+    text-align:center;
+    padding: 20px 0px;
+}
+.desc-col{
+    padding:80px 0px
+}
+.project-h1{
+    font-family: 'league_spartanbold';
+    font-size: 3rem
+}
+.desc-col p{
+    font-size: 1.5rem;
+    display :inline-block;
+    height:40px;
+}
+
+/* ---------------------------------------------------------------------------------- */
+
+/* Blog */
+
+#blog-section{
+    padding: 50px 0px;
+    background-color: #ffffff;
+    position:relative;
+}
+.blog-name{
+    width:60%;
+    margin:10px auto;
+    font-size: 4rem;
+    font-family: "Josefin Sans" , sans-serif;
+    border-style : solid none solid none;
+    border-width : 2px;
+    border-color:rgb(201, 201, 201);
+}
+.blog-box{
+    width:60%;
+    margin:auto;
+    padding: 50px 0px;
+    border-radius: 2px;
+    box-shadow: 0 0 5px black;
+    border-width : 5px;
+    border-style : none none solid none;
+    border-color : rgb(201, 201, 201);   
+    background-color: #ffffff;
+    background-image: url("https://www.transparenttextures.com/patterns/45-degree-fabric-light.png");
+}
+.blog{
+    width : 90%;
+    margin:auto;
+}
+.blog-date{
+    font-size: 2rem;
+    font-family: "Josefin Sans" , sans-serif;
+    border-style : solid none solid none;
+    border-width: 1px;
+}
+.blog-heading{
+    margin:0px;
+    color: #1b6ca8;
+    font-size: 2.5rem;
+    padding:10px 0px;
+    font-weight:bold;
+    font-family: "Josefin Sans" , sans-serif;
+}
+
+.blog-content{
+    font-weight: 200;
+    font-size: 1.2rem;
+    color: rgb(50,50, 50);
+    white-space : pre-wrap;
+    line-height: 1.8;
+    font-family: 'EB Garamond', serif;
+}
+
+code{
+    color :rgb(255, 72, 72) ;
+    background-color : rgb(231, 231, 231);
+}
+.sidebar {
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 2; /* Stay on top */
+    top: 0px;
+    left: 0;
+    background-color: #ffffff;
+    background-image: url("https://www.transparenttextures.com/patterns/45-degree-fabric-light.png");
+    border-radius : 2px;
+    box-shadow : 0 0 10px black;
+    overflow-x: hidden; /*Disable horizontal scroll*/
+    padding-top: 150px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidebar */
+}
+
+/* The sidebar links */
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 1.2rem;
+  color: #818181;
+  display: block;
+  transition: 0.3s; 
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidebar a:hover {
+  background-color : #bbe9e6;
+}
+
+.sidebar .closebtn:hover{
+    background : none;
+}
+
+/* Position and style the close button (top right corner) */
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+/* The button used to open the sidebar */
+.openbtn {
+  font-size: 3rem;
+  cursor: pointer;
+  background-color: #111;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+}
+
+.openbtn:hover {
+  background-color: #444;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#sidebar-button{
+    transition: margin-left .5s; /* If you want a transition effect */
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+    .sidebar {padding-top: 15px;}
+    .sidebar a {font-size: 18px;}
+}
+/* ----------------------------------------------------------- */
+
+/*footer */
+footer{
+    width:100% ; 
+    text-align:center;
+    background:#bbe9e6
+}
+
+.help {
+    color: #1b6ca8;
+    padding: 50px 0px;
+    font-family: 'Karla', sans-serif;
+    background: #fff;
+    width: 60%;
+    margin: auto;
+    border-radius: 5px;
+}
+
+.help h1{
+    font-size:3rem; width:90%;
+    margin:30px auto 0 auto
+}
+
+.help h3{
+    margin:30px auto;
+    color:#5f87a7;
+    width:90%;
+}
+
+.help p {
+    margin:auto;
+    font-size: 20px;
+    color: rgb(50, 50, 50);
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 500;
+    width: 60%;
+}
+
+.btn {
+    margin: 20px 0px;
+    font-size: 24px;
+    background: #5f87a7;
+    border-color: #5f87a7;
+    padding: 10px 30px
+}
+
+footer a:hover{
+text-decoration : none
+}
+
+/* ------------------------------------------------------------------------------------ */
+
+
+/* tablet or mobile-size */
+@media screen and (max-width:800px) and (min-width:500px) {
+
+    .nav,
+    .intro,
+    .salutation,
+    .carousel-heading-div,
+    .affirmation,.affirmation p,
+    .projects-line, .projects-line p,
+    .help,
+    .btn,
+    .blog-name,.blog-box {
+        width: 80%;
+    }
+
+    .name h1,.name h2, .name p{
+    width: 50%;
+    }
+
+    .link {
+        font-size: 20px
+    }
+
+    .hi-line {
+        width: 80%;
+        margin: auto
+    }
+    #projects-intro{
+        padding: 80px 0px;
+    }
+
+    .my-project{
+        padding: 20px 0px;
+    }
+
+}
+
+@media screen and (max-width:500px) and (min-width:200px) {
+
+    .nav,
+    .intro,
+    .salutation,
+    .help,
+    .intro,
+    #projects-intro h1,#projects-intro p,
+    .projects-line, .projects-line p,
+    .blog-name,.blog-box {
+        width: 95%;
+    }
+
+    .link{
+        font-size: 16px
+    }
+
+    .nav-right {
+        padding-right: 10px
+    }
+
+    #introduction .left{
+        padding : 40px 0px;
+    }
+    
+    #introduction .name{
+        width:90%
+    }
+
+    .name h1,.name h2, .name p{
+    width: 95%;
+    text-align:center
+    }
+
+    .salutation-box{
+        width: 100%
+    }
+
+    #information{
+        padding:50px 0px;
+    }
+
+    .hi-line,
+    .btn,
+    .affirmation,.projects-line p{
+        width: 90%;
+        margin:auto;
+    }
+
+    footer p,.help p{
+        width: 90%;
+        margin:auto;
+    }
+    .help p{
+        margin-bottom:20px
+    }
+
+    #projects-intro{
+        padding: 40px 0px
+    }
+    .my-project{
+        padding:20px 0px;
+    } 
+
+    .project-row{
+        width:95%;
+    }
+    .desc-col{
+        padding:20px;
+    }
+
+}
