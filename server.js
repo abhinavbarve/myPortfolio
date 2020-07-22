@@ -8,7 +8,7 @@ dotenv.config()
 
 app.set( "view engine", "ejs")
 app.get("/", (req,res) => {
-    res.render('Home',{title : "Home"})
+    res.render('home',{title : "Home"})
 })
 
 app.get("/projects", (req,res)=>{
