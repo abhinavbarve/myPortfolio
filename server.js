@@ -20,8 +20,6 @@ app.use(express.static(path.join(__dirname, 'public')))
 
 // database connection
 mongoose.connect(process.env.DATABASE_KEY,{useNewUrlParser : true,useUnifiedTopology: true })
-console.log(process.env.DATABASE_KEY)
-
 
 const postSchema = {
     date: {
