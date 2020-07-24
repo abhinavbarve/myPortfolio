@@ -358,8 +358,8 @@ body {
 .blog-name{
     width:60%;
     margin:10px auto;
-    font-size: 4rem;
     font-family: "Josefin Sans" , sans-serif;
+    font-size: 4rem;
     border-style : solid none solid none;
     border-width : 2px;
     border-color:rgb(201, 201, 201);
