@@ -1,4 +1,6 @@
-website-color:#142850, #cae8d5, #3b6978, #204051
+website colors : "#bbe9e6", "#1b6ca8"
 
-website-fonts:{font-family: 'Montserrat', sans-serif;
-                font-family: 'Vibur', cursive;}
+fonts used-
+body : "Karla";
+headings : "League SpartanBold";
+blog-text : "EB Garamound";

@@ -3,8 +3,8 @@ const app = express()
 const path = require("path")
 const mongoose = require("mongoose")
 const _ = require("lodash")
-const dotenv = require("dotenv")
-dotenv.config()
+const dotenv = require("dotenv").config()
+
 
 app.set( "view engine", "ejs")
 app.get("/", (req,res) => {
@@ -19,7 +19,7 @@ app.use(express.static(path.join(__dirname, 'public')))
 
 
 // database connection
-mongoose.connect("mongodb+srv://admin-abhinav:masadies06@abhinav-cluster.nbr4w.mongodb.net/blogPostDB",{useNewUrlParser : true,useUnifiedTopology: true })
+mongoose.connect(process.env.DATABASE_KEY,{useNewUrlParser : true,useUnifiedTopology: true })
 
 const postSchema = {
     date: {
