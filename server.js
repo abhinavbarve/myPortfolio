@@ -19,7 +19,7 @@ app.use(express.static(path.join(__dirname, 'public')))
 
 
 // database connection
-mongoose.connect("mongodb+srv://admin-abhinav:masadies06@abhinav-cluster.nbr4w.mongodb.net/blogPostDB",{useNewUrlParser : true,useUnifiedTopology: true })
+mongoose.connect(process.env.DATABASE_KEY,{useNewUrlParser : true,useUnifiedTopology: true })
 
 const postSchema = {
     date: {
