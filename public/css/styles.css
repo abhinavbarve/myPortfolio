@@ -306,7 +306,7 @@ body {
 
 .projects-line {
     margin: auto;
-    padding: 42px 0px;
+    padding: 50px 0px;
     background-color: #fff;
     text-align: center;
     width: 60%;
@@ -314,7 +314,7 @@ body {
 
 .projects-line p{
     width:50%;
-    text-align:justify;
+    text-align:center;
     margin:auto;
     font-size: 18px;
 }
@@ -547,6 +547,15 @@ footer a:hover{
 text-decoration : none
 }
 
+.contact{
+    text-align: center;
+    padding:20px 0px;
+    font-size:1.5rem;
+}
+.footer-link{
+    color: black;
+    padding:5px 10px
+}
 /* ------------------------------------------------------------------------------------ */
 
 
@@ -659,3 +668,5 @@ text-decoration : none
     }
 
 }
+
+
