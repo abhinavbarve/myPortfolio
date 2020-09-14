@@ -306,7 +306,7 @@ body {
 
 .projects-line {
     margin: auto;
-    padding: 50px 0px;
+    padding: 60px 0px;
     background-color: #fff;
     text-align: center;
     width: 60%;
@@ -319,31 +319,63 @@ body {
     font-size: 18px;
 }
 
-.my-project{
-    padding:80px 0px ;
-    box-shadow: 0 0 10px rgb(133, 133, 133) ;
+#projects{
+    box-shadow: 0 0 10px #444 ;
+    padding: 50px 0px;
 }
 
-.project-row{
-    width: 60%;
+.projects-wrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    width: 80%;
     margin:auto;
+    padding: 25px 0px;
+}
+.project-card{
+    text-align: center;
+    width: 24%;
+    border-radius: 5px;
+    margin: 10px 0px;
 }
 
-.image-col,.desc-col{
-    text-align:center;
+.project-title{
+    font-family: 'league_spartanbold';
+}
+.project-desc{
+    font-size: 1.2rem;
+}
+.card-img-top{
+    max-width:200px;
+    width: 80%;
     padding: 20px 0px;
 }
-.desc-col{
-    padding:80px 0px
+.btn-block.visit-link{
+    padding: 10px 25px; 
+    margin: 5px 0px; 
+    background: rgb(226, 226, 226);
+    color: rgb(0, 0, 0);
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bolder;
 }
-.project-h1{
-    font-family: 'league_spartanbold';
-    font-size: 3rem
+.btn-block.visit-link:hover{
+    background: rgb(165, 165, 165);
+    color:rgb(0, 0, 0);
 }
-.desc-col p{
-    font-size: 1.5rem;
-    display :inline-block;
-    height:40px;
+.btn-block.visit-link:focus{
+    outline: none;
+}
+
+@media (max-width: 1200px) and (min-width: 800px){
+    .project-card{
+        width: 30%;
+    }
+    .projects-wrapper{
+        width: 95%;
+    }
 }
 
 /* ---------------------------------------------------------------------------------- */
@@ -589,11 +621,12 @@ text-decoration : none
     #projects-intro{
         padding: 80px 0px;
     }
-
-    .my-project{
-        padding: 20px 0px;
+    .project-card{
+        width:45%;
     }
-
+    .projects-wrapper{
+        width: 95%;
+    }
 }
 
 @media screen and (max-width:500px) and (min-width:200px) {
@@ -604,7 +637,7 @@ text-decoration : none
     .help,
     .intro,
     #projects-intro h1,#projects-intro p,
-    .projects-line, .projects-line p,
+    .projects-line, .projects-line p,.projects-wrapper,
     .blog-name,.blog-box {
         width: 95%;
     }
@@ -652,19 +685,14 @@ text-decoration : none
     .help p{
         margin-bottom:20px
     }
-
+    #projects{
+        padding: 20px 0px;
+    }
     #projects-intro{
         padding: 40px 0px
     }
-    .my-project{
-        padding:20px 0px;
-    } 
-
-    .project-row{
-        width:95%;
-    }
-    .desc-col{
-        padding:20px;
+    .project-card{
+        width:90%;
     }
 
 }
