@@ -1,6 +1,6 @@
 {
   "name": "abhinav-portfolio",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -16,7 +16,7 @@
     "mongoose": "^5.9.25",
     "path": "^0.12.7"
   },
-  "devDependencies": {
+  "dependencies": {
     "bl": ">=2.2.1"
   },
   "description": ""
