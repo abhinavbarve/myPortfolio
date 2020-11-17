@@ -16,6 +16,8 @@
     "mongoose": "^5.9.25",
     "path": "^0.12.7"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "bl": ">=2.2.1"
+  },
   "description": ""
 }
